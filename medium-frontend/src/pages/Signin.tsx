@@ -47,7 +47,7 @@ const Signin = () => {
           placeholder="enter your name"
           label="first name"
           
-          onchange={(e) =>
+          onchange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setInputs((c:SigninInput) => ({
               ...c,
               name: e.target.value,
@@ -58,7 +58,7 @@ const Signin = () => {
           placeholder="enter your email"
           label="email"
           
-          onchange={(e) =>
+          onchange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setInputs((c:SigninInput) => ({
               ...c,
               username: e.target.value,
@@ -69,7 +69,7 @@ const Signin = () => {
           placeholder="enter your password"
           label="password"
          
-          onchange={(e) =>
+          onchange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setInputs((c:SigninInput) => ({
               ...c,
               password: e.target.value,

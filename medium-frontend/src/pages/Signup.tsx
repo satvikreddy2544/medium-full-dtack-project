@@ -40,7 +40,7 @@ const Signup = () => {
         placeholder="enter your email or username"
         label="first name"
         
-        onchange={(e) =>
+        onchange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setSignupInputs((c:SignUpInput) => ({
             ...c,
             username: e.target.value,
@@ -52,7 +52,7 @@ const Signup = () => {
         placeholder="enter your password"
         label="password"
        
-        onchange={(e) =>
+        onchange={(e: React.ChangeEvent<HTMLInputElement>) =>
           setSignupInputs((c:SignUpInput) => ({
             ...c,
             password: e.target.value,
