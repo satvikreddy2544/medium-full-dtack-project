@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 
-import { SignUpInput } from "medium_backend_common_new";
+import { SignUpInput, SigninInput } from "medium_backend_common_new";
 import InputBox from "../components/InputBox";
 
 import LoginContext from "../components/LoginContext";
@@ -48,7 +48,7 @@ const Signin = () => {
           label="first name"
           
           onchange={(e) =>
-            setInputs((c) => ({
+            setInputs((c:SigninInput) => ({
               ...c,
               name: e.target.value,
             }))

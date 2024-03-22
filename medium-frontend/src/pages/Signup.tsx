@@ -41,7 +41,7 @@ const Signup = () => {
         label="first name"
         
         onchange={(e) =>
-          setSignupInputs((c) => ({
+          setSignupInputs((c:SignUpInput) => ({
             ...c,
             username: e.target.value,
           }))
