@@ -59,7 +59,7 @@ const Signin = () => {
           label="email"
           
           onchange={(e) =>
-            setInputs((c) => ({
+            setInputs((c:SigninInput) => ({
               ...c,
               username: e.target.value,
             }))
@@ -70,7 +70,7 @@ const Signin = () => {
           label="password"
          
           onchange={(e) =>
-            setInputs((c) => ({
+            setInputs((c:SigninInput) => ({
               ...c,
               password: e.target.value,
             }))

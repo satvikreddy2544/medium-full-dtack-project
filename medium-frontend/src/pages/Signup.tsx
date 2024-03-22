@@ -53,7 +53,7 @@ const Signup = () => {
         label="password"
        
         onchange={(e) =>
-          setSignupInputs((c) => ({
+          setSignupInputs((c:SignUpInput) => ({
             ...c,
             password: e.target.value,
           }))
