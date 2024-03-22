@@ -5,6 +5,7 @@ import { Bindings } from "hono/types";
 import { decode, sign, verify } from "hono/jwt";
 import { signinInput } from "medium_backend_common_new_v2";
 import {singupInput} from 'medium_backend_common_new_v2'
+import { cors } from "hono/cors";
 const userRoutes = new Hono<{
 
     Bindings: {
@@ -12,6 +13,8 @@ const userRoutes = new Hono<{
       DATABASE_URL: string;
     };
   }>();
+
+userRoutes.use(cors());
 
 userRoutes.post("/signup", async (c) => {
     const prisma = new PrismaClient({
